@@ -60,12 +60,14 @@ socket.on('locationMessage', (message) => {
     autoscroll()
 })
 
-socket.on('roomData', ({ room, users }) => {
+socket.on('roomData', ({ room, users,userscount }) => {
     const html = Mustache.render(sidebarTemplate, {
         room,
-        users
+        users,
+        userscount
     })
     document.querySelector('#sidebar').innerHTML = html
+    document.querySelector('#userscount').innerHTML='Active users: '+userscount
 })
 
 $messageForm.addEventListener('submit', (e) => {
