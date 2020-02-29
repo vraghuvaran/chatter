@@ -39,8 +39,11 @@ io.on('connection', (socket) => {
             userscount: getUsersInRoom(user.room).length
 
         })
+
+
         
         callback()
+
     })
 
     socket.on('sendMessage', (message, callback) => {
@@ -52,6 +55,8 @@ io.on('connection', (socket) => {
         }
 
         io.to(user.room).emit('message', generateMessage(user.username, message))
+
+        
         callback()
     })
 

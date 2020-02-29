@@ -49,19 +49,19 @@ const getUsersInRoom = (room) => {
 }
 
 
-addUser({
-      id: 23,
-      username: 'hello',
-      room: 'he'
-})
-addUser({
-    id: 22,
-    username: 'hello',
-    room: 'e'
-})
+// addUser({
+//       id: 23,
+//       username: 'hello',
+//       room: 'he'
+// })
+// addUser({
+//     id: 22,
+//     username: 'hello',
+//     room: 'e'
+// })
 
 
-console.log(users);
+// console.log(users);
 
 module.exports = {
     addUser,
